@@ -1,15 +1,13 @@
 Package: rlyrics
-Title: What the Package Does (One Line, Title Case)
+Title: Downloads, cleans and creates wordcloud of lyrics
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Abhiket - Artan - Macy - Manju",
+           family = "Gaurav - Zandian - Chan - Abhinandana Kumar",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+           email = "artankhan@gmail.com",
+Description: Downloads data from Kaggle, finds the lyrics of a certain artist and song, cleans the lyrics and creates wordcloud of lyrics.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

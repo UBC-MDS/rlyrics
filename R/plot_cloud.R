@@ -17,7 +17,6 @@ plot_cloud <- function(
     max_font_size=30,
     max_words=120,
     background_color="black",
-    show=False,
-){
+    show=False){
 
 }

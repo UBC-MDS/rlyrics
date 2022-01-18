@@ -5,7 +5,7 @@ Authors@R:
     person(given = "Abhiket - Artan - Macy - Manju",
            family = "Gaurav - Zandian - Chan - Abhinandana Kumar",
            role = c("aut", "cre"),
-           email = "artankhan@gmail.com",
+           email = "artankhan@gmail.com")
 Description: Downloads data from Kaggle, finds the lyrics of a certain artist and song, cleans the lyrics and creates wordcloud of lyrics.
 License: MIT + file LICENSE
 Encoding: UTF-8

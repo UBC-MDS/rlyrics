@@ -1,47 +1,36 @@
 # Contributing to rlyrics
 
-This outlines how to propose a change to rlyrics. 
-For more detailed info about contributing to this, and other tidyverse packages, please see the
-[**development contributing guide**](https://rstd.io/tidy-contrib). 
+Contribution to the project is always welcomed, this document outlines the way in which one can propose changes/modifications to the  rlyrics project.
 
 ## Fixing typos
 
-You can fix typos, spelling mistakes, or grammatical errors in the documentation directly using the GitHub web interface, as long as the changes are made in the _source_ file. 
-This generally means you'll need to edit [roxygen2 comments](https://roxygen2.r-lib.org/articles/roxygen2.html) in an `.R`, not a `.Rd` file. 
-You can find the `.R` file that generates the `.Rd` by reading the comment in the first line.
+### Grammatical errors/Typos:
 
-## Bigger changes
+Grammatical errors or typos in documentation can be edited directly using the GitHub web interface, so long as the changes are made in the source file.
 
-If you want to make a bigger change, it's a good idea to first file an issue and make sure someone from the team agrees that it’s needed. 
-If you’ve found a bug, please file an issue that illustrates the bug with a minimal 
-[reprex](https://www.tidyverse.org/help/#reprex) (this will also help you write a unit test, if needed).
+### Code modifications/changes:
+
+YES: you can suggest a modifications/change by raising an issue
+NO: you cannot edit the code directly
+
+### Prerequisites
+Before you make a substantial pull request, you should always report an issue and make sure someone from the team agrees to the change. If you've found a bug, create an associated issue and illustrate the bug with a minimal reprex.
 
 ### Pull request process
 
-*   Fork the package and clone onto your computer. If you haven't done this before, we recommend using `usethis::create_from_github("UBC-MDS/rlyrics", fork = TRUE)`.
-
-*   Install all development dependences with `devtools::install_dev_deps()`, and then make sure the package passes R CMD check by running `devtools::check()`. 
-    If R CMD check doesn't pass cleanly, it's a good idea to ask for help before continuing. 
-*   Create a Git branch for your pull request (PR). We recommend using `usethis::pr_init("brief-description-of-change")`.
-
-*   Make your changes, commit to git, and then create a PR by running `usethis::pr_push()`, and following the prompts in your browser.
-    The title of your PR should briefly describe the change.
-    The body of your PR should contain `Fixes #issue-number`.
-
-*  For user-facing changes, add a bullet to the top of `NEWS.md` (i.e. just below the first header). Follow the style described in <https://style.tidyverse.org/news.html>.
-
-### Code style
-
-*   New code should follow the tidyverse [style guide](https://style.tidyverse.org). 
-    You can use the [styler](https://CRAN.R-project.org/package=styler) package to apply these styles, but please don't restyle code that has nothing to do with your PR.  
-
-*  We use [roxygen2](https://cran.r-project.org/package=roxygen2), with [Markdown syntax](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd-formatting.html), for documentation.  
-
-*  We use [testthat](https://cran.r-project.org/package=testthat) for unit tests. 
-   Contributions with test cases included are easier to accept.  
+We recommend that you create a Git branch for each pull request (PR).
+New code should follow the PEP8 style guide.
 
 ## Code of Conduct
 
-Please note that the rlyrics project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
-project you agree to abide by its terms.
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+
+### Attribution
+These contributing guidelines are adapted from the [Attribution](https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/)
+
+# Contacts:
+
+1. [Abhiket Gaurav](mailto:p12abhiketg@iimidr.ac.in)
+2. [Artan Zandian](mailto:artanzand@yahoo.co.uk)
+3. [Manju Abhinandana Kumar](mailto:manju.abhinandana@gmail.com)
+4. [Macy Chan](mailto:macychan@student.ubc.ca)

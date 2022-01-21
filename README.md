@@ -3,6 +3,9 @@
 
 # rlyrics
 
+***Authors:*** Abhiket Gaurav, Artan Zandian, Macy Chan, Manju
+Abhinandana Kumar
+
 <!-- badges: start -->
 <!-- badges: end -->
 
@@ -18,6 +21,15 @@ lyrics, clean text and generate a word cloud.
 | extract_lyrics | `song_title`, `artist`                                                | String    | Extracts song lyrics of a song `song_title` by `artist`                                                                         |
 | clean_text     | `text`, `bool_contra_dict`                                            | String    | Cleans up the `lyrics` by removing special characters, html tags, #tags, contraction words and convert everything to lower case |
 | plot_cloud     | `song`, `file_path`, `max_font_size`, `max_words`, `background_color` | Image     | Creates a word cloud image of most occurring words of a song/songs by an artist                                                 |
+
+## Our Package in the R Ecosystem
+
+There exist similar packages in R. However, this package is more
+holistic, in the sense that it downloads the lyrics through APIs, cleans
+the text, and then makes the word cloud. There are packages which does
+one of these steps. This package takes care of all the steps. Of the
+many other similar packages, the one that come close is:
+[geniusr](https://cran.r-project.org/web/packages/geniusr/geniusr.pdf)
 
 ## Installation
 
@@ -74,7 +86,7 @@ WordCloud is an artistic rendering of the most frequent words in a text
 document. A higher occurrence for a word is translated into a larger
 text size.
 
-### Contributors
+## Contributors
 
 The names of core development team is listed below.
 
@@ -90,9 +102,9 @@ guidelines. Please note that this project is released with a Code of
 Conduct. By contributing to this project, you agree to abide by its
 terms.
 
-### License
+## License
 
 `rlyrics` was created by Group 2. It is licensed under the terms of the
 MIT license.
 
-### Credits
+## Credits

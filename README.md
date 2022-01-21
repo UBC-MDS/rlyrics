@@ -10,7 +10,7 @@ The goal of rlyrics is to extract and analyze lyrics. It provides
 functions to download songs attribute datasets from Kaggle, extract
 lyrics, clean text and generate a word cloud.
 
-### Functions
+## Functions
 
 | Function Name  | Input                                                                 | Output    | Description                                                                                                                     |
 |----------------|-----------------------------------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------|
@@ -19,7 +19,7 @@ lyrics, clean text and generate a word cloud.
 | clean_text     | `text`, `bool_contra_dict`                                            | String    | Cleans up the `lyrics` by removing special characters, html tags, #tags, contraction words and convert everything to lower case |
 | plot_cloud     | `song`, `file_path`, `max_font_size`, `max_words`, `background_color` | Image     | Creates a word cloud image of most occurring words of a song/songs by an artist                                                 |
 
-### Installation
+## Installation
 
 You can install the development version of rlyrics from
 [GitHub](https://github.com/) with:
@@ -29,7 +29,7 @@ You can install the development version of rlyrics from
 devtools::install_github("UBC-MDS/rlyrics")
 ```
 
-### Features
+## Features
 
 The rlyrics packages contains the following four functions:
 
@@ -48,9 +48,7 @@ The rlyrics packages contains the following four functions:
 4.  `plot_cloud()` The plot cloud function creates a word cloud of most
     occurring words in a song/songs by an artist.
 
-### Dependencies
-
-### Usage
+## Example
 
 #### Downloading and Selecting
 
@@ -75,10 +73,6 @@ text.
 WordCloud is an artistic rendering of the most frequent words in a text
 document. A higher occurrence for a word is translated into a larger
 text size.
-
-### Documentation
-
-The official documentation is hosted on Read the Docs: \[Link TBC\]
 
 ### Contributors
 

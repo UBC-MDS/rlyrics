@@ -8,6 +8,7 @@
 #' @export
 #'
 #' @examples
+#' df <- download_data(dataset, file_path, columns)
 download_data <- function(dataset, file_path, columns){
 
 }

@@ -5,7 +5,6 @@
 #' @param max_font_size maximum font size
 #' @param max_words maximum number of words to be included in wordcloud
 #' @param background_color background color
-#' @param show whether to display the plot to screen
 #'
 #' @return A wordcloud image
 #' @export
@@ -16,6 +15,7 @@ plot_cloud <- function(
     file_path,
     max_font_size=30,
     max_words=120,
-    background_color="black",
+    background_color="black"){
 
 }
+

@@ -2,8 +2,6 @@
 #'
 #' @param text A text to clean.
 #' @param bool_contra_dict A flag to clear contraction words.
-
-
 #' @return text Cleaned text
 #' @export
 #'

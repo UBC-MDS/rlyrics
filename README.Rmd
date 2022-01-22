@@ -109,5 +109,3 @@ We welcome and recognize all contributions. Check out the contributing guideline
 
 `rlyrics` was created by Group 2. It is licensed under the terms of the MIT license.
 
-## Credits
-

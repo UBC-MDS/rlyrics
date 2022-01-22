@@ -8,7 +8,8 @@
 #' @export
 #'
 #' @examples
-#' df <- download_data(dataset, file_path, columns)
+#' dataset = "geomack/spotifyclassification"
+#' df <- download_data(dataset, "data/spotify_attributes", ["song_title", "artist"])
 download_data <- function(dataset, file_path, columns){
 
 }

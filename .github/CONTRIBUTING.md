@@ -1,8 +1,6 @@
 # Contributing to rlyrics
 
 This outlines how to propose a change to rlyrics. 
-For more detailed info about contributing to this, and other tidyverse packages, please see the
-[**development contributing guide**](https://rstd.io/tidy-contrib). 
 
 ## Fixing typos
 
@@ -20,7 +18,7 @@ If you’ve found a bug, please file an issue that illustrates the bug with a mi
 
 *   Fork the package and clone onto your computer. If you haven't done this before, we recommend using `usethis::create_from_github("UBC-MDS/rlyrics", fork = TRUE)`.
 
-*   Install all development dependences with `devtools::install_dev_deps()`, and then make sure the package passes R CMD check by running `devtools::check()`. 
+*   Install all development dependencies with `devtools::install_dev_deps()`, and then make sure the package passes R CMD check by running `devtools::check()`. 
     If R CMD check doesn't pass cleanly, it's a good idea to ask for help before continuing. 
 *   Create a Git branch for your pull request (PR). We recommend using `usethis::pr_init("brief-description-of-change")`.
 
@@ -45,3 +43,10 @@ If you’ve found a bug, please file an issue that illustrates the bug with a mi
 Please note that the rlyrics project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
 project you agree to abide by its terms.
+
+## Contacts:
+
+1. [Abhiket Gaurav](mailto:p12abhiketg@iimidr.ac.in)
+2. [Artan Zandian](mailto:artanzand@yahoo.co.uk)
+3. [Manju Abhinandana Kumar](mailto:manju.abhinandana@gmail.com)
+4. [Macy Chan](mailto:macychan@student.ubc.ca)

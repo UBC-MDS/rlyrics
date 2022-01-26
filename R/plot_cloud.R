@@ -12,10 +12,6 @@
 #'song <- data.frame(song_title  = c("22", "Bohemian Rhapsody"), artist = c("Taylor Swift", "Queen"))
 #'plot_cloud(song, max_font_size=1.6, max_words=100, background_color="white")
 
-library(wordcloud)
-source("R/extract_lyrics.R")
-source("R/clean_text.R")
-
 
 plot_cloud <- function(song, max_font_size=1, max_words=100, background_color="black"){
 
@@ -29,10 +25,10 @@ plot_cloud <- function(song, max_font_size=1, max_words=100, background_color="b
     }
 
     if(!is.character(background_color)){
-        stop("max_font_size should be of type character")
+        stop("background_color should be of type character")
     }
 
-    if(!is.numeric(max_font_size) & !is.numeric(max_words)){
+    if(!is.numeric(max_font_size) | !is.numeric(max_words)){
         stop("Both max_font_size and max_words should be of type numeric.")
     }
 

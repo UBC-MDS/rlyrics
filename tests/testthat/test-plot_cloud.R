@@ -1,6 +1,3 @@
-source("R/plot_cloud.R")
-library(testthat)
-
 song <- data.frame(song_title  = c("22", "Bohemian Rhapsody"),
                     artist = c("Taylor Swift", "Queen"))
 
@@ -8,37 +5,37 @@ song <- data.frame(song_title  = c("22", "Bohemian Rhapsody"),
 
 # Testing input types are checked
 test_that("song is a data.frame", {
-    expect_message(plot_cloud(song = "22"),
-                   "song should be a data.frame")
+    expect_error(plot_cloud(song = "22"),
+                   "song should be of type dataframe")
 })
 
 test_that("song is a data.frame with two columns", {
-    expect_message(plot_cloud(song = data.frame(song_title = c("22", "Bohemian Rhapsody")),
+    expect_error(plot_cloud(song = data.frame(song_title = c("22", "Bohemian Rhapsody")),
                               "song should be a data.frame with two columns"))
 })
 
 test_that("background_color is of type character", {
-    expect_message(plot_cloud(song = song, file_path = file_path, background_color=23),
-                   "background_color should be of type character")
+    expect_error(plot_cloud(song = song, background_color=23),
+                   "background_color should be of type characte")
 })
 
-test_that("max_font_size is of size int", {
-    expect_message(plot_cloud(song = song, file_path = file_path, max_font_size="ten"),
-                   "max_font_size should be of size int")
+test_that("max_font_size is of type numeric", {
+    expect_error(plot_cloud(song = song, max_font_size="ten"),
+                 "Both max_font_size and max_words should be of type numeric.")
 })
 
-test_that("max_words is of size int", {
-    expect_message(plot_cloud(song = song, file_path = file_path, max_words="ten"),
-                   "max_words should be of size int")
+test_that("max_words is of type numeric", {
+    expect_error(plot_cloud(song = song, max_words="ten"),
+                   "Both max_font_size and max_words should be of type numeric.")
 })
 
 
 # Testing the case when no lyrics is found
 test_that("song title and artist do not match", {
-    expect_message(plot_cloud(song = data.frame(song_title  = c("22"), artist = c("Queen")),
+    expect_error(plot_cloud(song = data.frame(song_title  = c("22"),
+                                              artist = c("Queen")),
                               "song title and artist do not match"))
 })
-
 
 
 # Testing if an image is created

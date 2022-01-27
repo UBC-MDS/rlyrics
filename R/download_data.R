@@ -33,8 +33,8 @@ download_data <- function(dataset, file_path, columns) {
 
     kaggler::kgl_auth(creds_file = '~/.kaggle/kaggle.json')
     response <- kaggler::kgl_datasets_download_all(owner_dataset = dataset)
-    utils::download.file(response[["url"]], paste0(file_path,"/temp.zip"), mode="wb")
-    unzip_result <- utils::unzip(paste0(file_path,"/temp.zip"), exdir = file_path, overwrite = TRUE)
+    utils::download.file(response[["url"]], paste0(file_path,"/temp.zip"), mode="wb", quiet = TRUE)
+    unzip_result <- suppressWarnings(utils::unzip(paste0(file_path,"/temp.zip"), exdir = file_path, overwrite = TRUE))
     df <- utils::read.csv(unzip_result)
 
     tryCatch({

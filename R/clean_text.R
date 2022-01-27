@@ -1,11 +1,13 @@
-#' Cleans the text by removing special characters, html_tags, #tags, contaction words.
+#' Cleans the text by removing special characters, html_tags, #tags, contaction words and convert everything to lower case.
 #'
 #' @param text A text to clean.
-#'
-#' @return Cleaned text
+#' @param bool_contra_dict A flag to clear contraction words.
+#' @return text Cleaned text
 #' @export
 #'
 #' @examples
-clean_text <- function(text) {
-
+#' text <- "Early optimization is the root of all evil!"
+#' clean_text(text,bool_contra_dict= False)
+#> [1] "early optimization is the root of all evil"
+clean_text <- function(text,True) {
 }

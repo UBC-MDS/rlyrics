@@ -9,6 +9,15 @@
 #' @examples
 #' extract_lyrics( "22", "Taylor Swift")
 extract_lyrics <- function(song_title, artist) {
+
+    if ( str_squish(song_title) == "" | str_squish(artist) == 0){
+        stop("Empty input")
+    }
+
+    if ( class(song_title) != "character" | class(artist) != "character"){
+        stop("Invalid column type, song title and artist have to be strings")
+    }
+
     lyrics = ""
     url = paste0(
         "https://genius.com/",
@@ -17,13 +26,20 @@ extract_lyrics <- function(song_title, artist) {
         stringr::str_replace_all(song_title, " ", "-"),
         "-lyrics"
     )
+
+    tryCatch({
     Scraped_webpage <- rvest::read_html(url)
-    lyrics_html <- rvest::html_nodes(Scraped_webpage, '.lgZgEN')
+    lyrics_html <- rvest::html_nodes(Scraped_webpage, xpath = '//*[@id="lyrics-root"]')
     stripped_htmltext <- rvest::html_text(lyrics_html)
-    vec_lyric <-
-        gsub("([a-z])([A-Z])", "\\1 \\2", stripped_htmltext)
-    for (i in vec_lyric) {
-        lyrics = paste0(lyrics , i)
-    }
+    closeAllConnections()
+    },
+    error=function(cond) {
+        stop("Song not found")
+    })
+
+    lyrics <- gsub("\\[[^][]*]"," ",stripped_htmltext)
+    lyrics <- gsub("([a-z])([A-Z])", "\\1 \\2", lyrics)
+    lyrics <- gsub(" Lyrics ", " ", lyrics)
     lyrics
 }
+

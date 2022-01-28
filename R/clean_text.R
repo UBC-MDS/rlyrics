@@ -28,7 +28,7 @@ clean_text <- function(text) {
     # removing punctuation marks
     temp <- gsub('[[:punct:]]', '', temp)
     # removing stopwords special charaters
-    temp <- tm::removeWords(temp,stopwords("en"))
+    temp <- tm::removeWords(temp,stopwords::stopwords("en"))
     # removing special charaters
     temp <- stringr::str_replace_all(temp,"[^a-zA-Z\\s]", " ")
     # removing extra spaces

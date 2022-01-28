@@ -55,7 +55,5 @@ plot_cloud <- function(song, max_font_size=1, max_words=100, background_color="b
 
     # Generate the wordcloud
     wordcloud2::wordcloud2(data=df, size=max_font_size, backgroundColor=background_color)
-
-    TRUE
 }
 

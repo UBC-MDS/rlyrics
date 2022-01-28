@@ -22,7 +22,7 @@ Imports:
     here,
     rvest,
     stringr,
-    wordcloud2
+    wordcloud2,
     kaggler (>= 0.0.0.9000)
 Remotes:  
     ldurazo/kaggler

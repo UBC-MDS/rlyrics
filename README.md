@@ -3,12 +3,13 @@
 
 # rlyrics
 
-***Authors:*** Abhiket Gaurav, Artan Zandian, Macy Chan, Manju
-Abhinandana Kumar
+A R package to extract and analyze lyrics
+- Authors: Abhiket Gaurav, Artan Zandian, Macy Chan, Manju Abhinandana Kumar
 
 <!-- badges: start -->
 <!-- badges: end -->
 
+## Overview
 The goal of rlyrics is to extract and analyze lyrics. It provides
 functions to download songs attribute datasets from Kaggle, extract
 lyrics, clean text and generate a word cloud.
@@ -70,7 +71,7 @@ dataframe with `columns` argument.
 
 To use the Kaggle API, sign up for a Kaggle account at Kaggle. Then go
 to the ‘Account’ tab of your user profile
-(<https://www.kaggle.com/><username>/account) and select ‘Create API
+(https://www.kaggle.com/<username\>/account) and select ‘Create API
 Token’. This will trigger the download of kaggle.json, a file containing
 your API credentials. Place this file in the location
 \~/.kaggle/kaggle.json. The function will automatically read your Kaggle
@@ -108,7 +109,6 @@ library("rlyrics")
 text <- "Early optimization is the root of all evil!"
 # Clean the extracted raw lyrics (text)
 clean_text(text)
-#> NULL
 ```
 
 #### Creating WordCloud
@@ -116,7 +116,7 @@ clean_text(text)
 WordCloud is an artistic rendering of the most frequent words in a text
 document. A higher occurrence for a word is translated into a larger
 text size. At this stage, we have helper functions to facilitate the
-extraction and cleaning of lyrics. The plot_cloud() function accepts a
+extraction and cleaning of lyrics. The `plot_cloud()` function accepts a
 dataframe with artist and song_title data. It will then extract the
 lyrics for all songs and saves a WordCloud of the most occurring terms
 in the file_path provided by the user. The WordCloud parameters to be
@@ -127,7 +127,6 @@ library("rlyrics")
 song <- data.frame(song_title  = c("22", "Bohemian Rhapsody"), artist = c("Taylor Swift", "Queen"))
 # plotting and saving WordCloud
 plot_cloud(song, max_font_size=1.6, max_words=100, background_color="white")
-#> NULL
 ```
 
 ## Contributors

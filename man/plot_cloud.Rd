@@ -2,33 +2,31 @@
 % Please edit documentation in R/plot_cloud.R
 \name{plot_cloud}
 \alias{plot_cloud}
-\title{Creates a wordcloud of most occuring words in a string or list of strings}
+\title{Creates a wordcloud of most occurring words in a string or list of strings}
 \usage{
 plot_cloud(
   song,
-  file_path,
-  max_font_size = 30,
-  max_words = 120,
-  background_color = "black",
-  show = False
+  max_font_size = 1,
+  max_words = 100,
+  background_color = "black"
 )
 }
 \arguments{
-\item{song}{with artist as dictionary key and song_title as value. Both key and value are strings.}
+\item{song}{A data frame including song_title and artist in each column}
 
-\item{file_path}{The location to save the file}
-
-\item{max_font_size}{maximum font size}
+\item{max_font_size}{maximum font size - numeric}
 
 \item{max_words}{maximum number of words to be included in wordcloud}
 
 \item{background_color}{background color}
-
-\item{show}{whether to display the plot to screen}
 }
 \value{
 A wordcloud image
 }
 \description{
-Creates a wordcloud of most occuring words in a string or list of strings
+Creates a wordcloud of most occurring words in a string or list of strings
+}
+\examples{
+song <- data.frame(song_title  = c("22", "Bohemian Rhapsody"), artist = c("Taylor Swift", "Queen"))
+plot_cloud(song, max_font_size=1.6, max_words=100, background_color="white")
 }

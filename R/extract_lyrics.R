@@ -10,7 +10,7 @@
 #' extract_lyrics( "22", "Taylor Swift")
 extract_lyrics <- function(song_title, artist) {
 
-    if ( str_squish(song_title) == "" | str_squish(artist) == 0){
+    if ( stringr::str_squish(song_title) == "" | stringr::str_squish(artist) == 0){
         stop("Empty input")
     }
 

@@ -17,7 +17,7 @@ clean_text <- function(text) {
     }
 
     # check for blank string
-    if(str_length(trimws(text)) == 0 ){
+    if(stringr::str_length(trimws(text)) == 0 ){
         stop("Blank text input")
     }
 

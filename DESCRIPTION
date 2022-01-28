@@ -11,11 +11,18 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-Imports:
+Imports: 
+    tm,
+    textclean,
+    readr,
+    here,
+    rvest,
+    stringr,
+    wordcloud2
     kaggler (>= 0.0.0.9000)
 Remotes:  
     ldurazo/kaggler

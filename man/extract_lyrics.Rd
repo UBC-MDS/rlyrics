@@ -4,18 +4,19 @@
 \alias{extract_lyrics}
 \title{Extracting lyrics for a song}
 \usage{
-extract_lyrics(token, song_title, artist)
+extract_lyrics(song_title, artist)
 }
 \arguments{
-\item{token}{Title of the song}
+\item{song_title}{Title of the song}
 
-\item{song_title}{Artist of the song}
-
-\item{artist}{A token from Genius for asccessing lyrics}
+\item{artist}{Artist of the song}
 }
 \value{
-songs Return lyrics of song with three columns: song_title, artist and lyrics
+Return song lyrics
 }
 \description{
 Extracting lyrics for a song
+}
+\examples{
+extract_lyrics( "22", "Taylor Swift")
 }

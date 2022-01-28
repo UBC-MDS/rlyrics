@@ -7,15 +7,7 @@
 #' @examples
 #' text <- "Early optimization is the root of all evil!"
 #' clean_text(text)
-#> [1] "early optimization is the root of all evil"
-
-install.packages("stringr")
-install.packages("textclean")
-install.packages("tm")
-
-library(stringr)
-library(textclean)
-library(tm)
+#> [1] "early optimization root evil"
 
 clean_text <- function(text) {
 
@@ -28,20 +20,15 @@ clean_text <- function(text) {
     if(str_length(trimws(text)) == 0 ){
         stop("Blank text input")
     }
-    
-    # check if the text is encoded properly
-    if(validUTF8(text) != TRUE){
-        stop("please input a proper text")
-    }
-    
+
     # Lowercase
     temp <- tolower(text)
     # replacing contraction words
-    temp <- replace_contraction(temp)
+    temp <- textclean::replace_contraction(temp)
     # removing punctuation marks
     temp <- gsub('[[:punct:]]', '', temp)
     # removing stopwords special charaters
-    temp <- removeWords(temp,stopwords("en"))
+    temp <- tm::removeWords(temp,stopwords("en"))
     # removing special charaters
     temp <- stringr::str_replace_all(temp,"[^a-zA-Z\\s]", " ")
     # removing extra spaces

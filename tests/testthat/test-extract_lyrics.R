@@ -1,9 +1,6 @@
-library(here)
-library(readr)
-library(stringr)
 
 test_that("happy case", {
-    target = readr::read_file(here("tests", "testthat", "data","lyrics_22.txt")) |> substr(1, 100)
+    target = readr::read_file(here::here("tests", "testthat", "data","lyrics_22.txt")) |> substr(1, 100)
     output = extract_lyrics("22", "Taylor Swift") |> substr(1, 100)
     expect_equal(target , output)
 })

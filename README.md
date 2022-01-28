@@ -20,12 +20,12 @@ lyrics, clean text and generate a word cloud.
 
 ## Functions
 
-| Function Name  | Input                                                    | Output    | Description                                                                                                                      |
-|----------------|----------------------------------------------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------|
-| download_data  | `dataset`, `file_path`, `columns`                        | Dataframe | Downloads dataset from `kaggle dataset` and extract `columns` from csv file                                                      |
-| extract_lyrics | `song_title`, `artist`                                   | String    | Extracts song lyrics of a song `song_title` by `artist`                                                                          |
+| Function Name  | Input                                                    | Output    | Description                                                                                                                     |
+|----------------|----------------------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------|
+| download_data  | `dataset`, `columns`                                     | Dataframe | Downloads dataset from `kaggle dataset` and extract `columns` from csv file                                                     |
+| extract_lyrics | `song_title`, `artist`                                   | String    | Extracts song lyrics of a song `song_title` by `artist`                                                                         |
 | clean_text     | `text`, `bool_contra_dict`                               | String    | Cleans up the `lyrics` by removing special characters, html tags, \#tags, contraction words and convert everything to lower case |
-| plot_cloud     | `song`, `max_font_size`, `max_words`, `background_color` | Image     | Creates a word cloud image of most occurring words of a song/songs by an artist                                                  |
+| plot_cloud     | `song`, `max_font_size`, `max_words`, `background_color` | Image     | Creates a word cloud image of most occurring words of a song/songs by an artist                                                 |
 
 ## Our Package in the R Ecosystem
 
@@ -86,7 +86,7 @@ library("rlyrics")
 # Example dataset: Spotify Song Attributes  
 dataset <- "geomack/spotifyclassification"
 # Extract columns 
-df <- download_data(dataset, "data", c("song_title", "artist"))
+df <- download_data(dataset, c("song_title", "artist"))
 ```
 
 #### Extracting Lyrics

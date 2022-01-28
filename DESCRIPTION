@@ -17,8 +17,9 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     tm,
-    textclean
+    textclean,
     readr,
     here,
     rvest,
-    stringr
+    stringr,
+    wordcloud2

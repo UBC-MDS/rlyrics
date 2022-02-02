@@ -25,7 +25,7 @@ test_that("Incorrect column names, please check again", {
 })
 
 test_that("hpapy case", {
-    target <- read.csv ("data.csv")
+    target <- read.csv ("data/data.csv")
     output <- download_data(dataset, c("song_title", "artist"))
     expect_equal(target[,c('song_title', 'artist')], output)
 })

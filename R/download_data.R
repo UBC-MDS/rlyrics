@@ -28,7 +28,7 @@ download_data <- function(dataset, columns) {
     response <- kaggler::kgl_datasets_download_all(owner_dataset = dataset)
     utils::download.file(response[["url"]], "temp.zip" , mode="wb", quiet = TRUE)
     unzip_result <- suppressWarnings(utils::unzip("temp.zip" ))
-    df <- utils::read.csv(unzip_result)
+    df <- readr::read_csv(unzip_result)
 
     if (columns[1] %in% colnames(df) && columns[2] %in% colnames(df)){
         df <- df |> dplyr::select(tidyselect::all_of(columns))

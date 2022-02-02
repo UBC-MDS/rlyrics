@@ -4,12 +4,10 @@
 \alias{download_data}
 \title{Downloads dataset from kaggle to filepath and creates a dataframe with input columns}
 \usage{
-download_data(dataset, file_path, columns)
+download_data(dataset, columns)
 }
 \arguments{
 \item{dataset}{kaggle dataset name to download}
-
-\item{file_path}{location to save the file}
 
 \item{columns}{list of columns to create a dataframe}
 }
@@ -18,4 +16,8 @@ A dataframe with the given column names
 }
 \description{
 Downloads dataset from kaggle to filepath and creates a dataframe with input columns
+}
+\examples{
+dataset <- "geomack/spotifyclassification"
+df <- download_data(dataset, c("song_title", "artist"))
 }

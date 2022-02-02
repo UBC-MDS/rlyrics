@@ -21,6 +21,7 @@ A R package to extract and analyze lyrics
 - Authors: Abhiket Gaurav, Artan Zandian, Macy Chan, Manju Abhinandana Kumar
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/UBC-MDS/rlyrics/workflows/R-CMD-check/badge.svg)](https://github.com/UBC-MDS/rlyrics/actions)
 <!-- badges: end -->
 
 ## Overview

@@ -18,15 +18,16 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {os: macOS-latest,   r: 'release'}
-          - {os: windows-latest, r: 'release'}
-          - {os: ubuntu-latest,   r: 'devel', http-user-agent: 'release'}
+          # - {os: macOS-latest,   r: 'release'}
+          # - {os: windows-latest, r: 'release'}
+          # - {os: ubuntu-latest,   r: 'devel', http-user-agent: 'release'}
           - {os: ubuntu-latest,   r: 'release'}
           # - {os: ubuntu-latest,   r: 'oldrel-1'}
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       R_KEEP_PKG_SOURCE: yes
+
 
     steps:
       - uses: actions/checkout@v2
@@ -44,16 +45,14 @@ jobs:
           extra-packages: rcmdcheck
 
       - uses: r-lib/actions/check-r-package@master
-        env:
+        with:
           KAGGLE_USERNAME: ${{ secrets.KaggleUsername }}
           KAGGLE_KEY: ${{ secrets.KaggleKey }}
+
 
       - name: Show testthat output
         if: always()
         run: find check -name 'testthat.Rout*' -exec cat '{}' \; || true
-        env:
-          KAGGLE_USERNAME: ${{ secrets.KaggleUsername }}
-          KAGGLE_KEY: ${{ secrets.KaggleKey }}
         shell: bash
 
       - name: Upload check results

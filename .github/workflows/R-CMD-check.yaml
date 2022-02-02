@@ -45,12 +45,17 @@ jobs:
 
       - uses: r-lib/actions/check-r-package@master
 
+      - name: Save kaggle API credentials
+        run:
+          mkdir docs/.kaggle
+          echo -e '\{"username":{$KAGGLE_USERNAME},"key":{$KAGGLE_KEY}\}' > ~/docs/.kaggle/kaggle.json
+
       - name: Show testthat output
         if: always()
         run: find check -name 'testthat.Rout*' -exec cat '{}' \; || true
         env:
-            KAGGLE_USERNAME: ${{ secrets.KaggleUsername }}
-            KAGGLE_KEY: ${{ secrets.KaggleKey }}
+          KAGGLE_USERNAME: ${{ secrets.KaggleUsername }}
+          KAGGLE_KEY: ${{ secrets.KaggleKey }}
         shell: bash
 
       - name: Upload check results

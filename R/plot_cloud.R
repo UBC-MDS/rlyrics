@@ -9,8 +9,10 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' song <- data.frame(song_title  = c("22", "Bohemian Rhapsody"), artist = c("Taylor Swift", "Queen"))
 #' plot_cloud(song, max_font_size=1.6, max_words=100, background_color="white")
+#' }
 
 plot_cloud <- function(song, max_font_size=1, max_words=100, background_color="black"){
 

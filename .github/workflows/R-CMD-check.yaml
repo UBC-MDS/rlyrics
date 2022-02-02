@@ -44,11 +44,9 @@ jobs:
           extra-packages: rcmdcheck
 
       - uses: r-lib/actions/check-r-package@master
-
-      - name: Save kaggle API credentials
-        run:
-          mkdir docs/.kaggle
-          echo -e '\{"username":{$KAGGLE_USERNAME},"key":{$KAGGLE_KEY}\}' > ~/docs/.kaggle/kaggle.json
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KaggleUsername }}
+          KAGGLE_KEY: ${{ secrets.KaggleKey }}
 
       - name: Show testthat output
         if: always()

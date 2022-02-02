@@ -24,6 +24,8 @@ Imports:
     rvest,
     stringr,
     wordcloud2,
-    kaggler (>= 0.0.0.9000)
+    kaggler (>= 0.0.0.9000),
+    dplyr,
+    tidyselect
 Remotes: 
     ldurazo/kaggler

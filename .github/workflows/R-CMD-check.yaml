@@ -46,11 +46,11 @@ jobs:
       - uses: r-lib/actions/check-r-package@master
 
       - name: Show testthat output
+        if: always()
+        run: find check -name 'testthat.Rout*' -exec cat '{}' \; || true
         env:
             KAGGLE_USERNAME: ${{ secrets.KaggleUsername }}
             KAGGLE_KEY: ${{ secrets.KaggleKey }}
-        if: always()
-        run: find check -name 'testthat.Rout*' -exec cat '{}' \; || true
         shell: bash
 
       - name: Upload check results

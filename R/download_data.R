@@ -11,6 +11,7 @@
 #' df <- download_data(dataset, c("song_title", "artist"))
 download_data <- function(dataset, columns) {
 
+
     # check input types
 
     if(!is.character(dataset)){

@@ -59,7 +59,7 @@ The rlyrics packages contains the following four functions:
     with columns song title, artist and lyrics.
 
 3.  `clean_text()` The lyrics extracted from `extract_lyrics()` are not
-    clean. It removes special characters, html tags, #tags, contraction
+    clean. It removes special characters, html tags, \#tags, contraction
     words and converts everything to lower case.
 
 4.  `plot_cloud()` The plot cloud function creates a word cloud of most

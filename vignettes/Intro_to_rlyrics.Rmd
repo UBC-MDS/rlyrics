@@ -69,12 +69,12 @@ The second function in our library is the `rlyrics::extract_lyrics()`. This func
 lyrics <- extract_lyrics( "22", "Taylor Swift")
 ```
 
-```{r extract-lyrics-example, eval = FALSE, echo = FALSE, fig.width=7, fig.height=4, eval=FALSE}
+```{r extract-lyrics-example, eval = FALSE, echo = FALSE, fig.width=7, fig.height=4}
 lyrics
 ```
 
 ```{r, echo=FALSE, out.width="60%"}
-knitr::include_graphics("../man/images/lyrics.png")
+knitr::include_graphics("../man/figures/lyrics.png")
 ```
 
 ### 3. Cleaning the text
@@ -89,7 +89,7 @@ clean_text
 ```
 
 ```{r, echo=FALSE, out.width="60%"}
-knitr::include_graphics("../man/images/clean_text.png")
+knitr::include_graphics("../man/figures/clean_text.png")
 ```
 
 ### 4. Creating WordCloud
@@ -105,11 +105,11 @@ song <- data.frame(song_title = "22", artist = "Taylor Swift")
 word_cloud <- plot_cloud(song, max_font_size=1.6, max_words=100, background_color="white")
 ```
 
-```{r word-cloud-example,eval = FALSE, echo = FALSE, fig.width=7, fig.height=4, eval=FALSE}
+```{r word-cloud-example,eval = FALSE, echo = FALSE, fig.width=7, fig.height=4}
 word_cloud
 ```
 
 ```{r ,echo=FALSE, out.width="60%"}
-knitr::include_graphics("../man/images/wordcloud.png")
+knitr::include_graphics("../man/figures/wordcloud.png")
 ```
 

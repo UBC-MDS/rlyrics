@@ -18,5 +18,5 @@ Return song lyrics
 Extracting lyrics for a song
 }
 \examples{
-extract_lyrics( "22", "Taylor Swift")
+# extract_lyrics( "22", "Taylor Swift")
 }

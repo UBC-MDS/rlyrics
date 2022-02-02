@@ -27,9 +27,7 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       R_KEEP_PKG_SOURCE: yes
-      KAGGLE_USERNAME: ${{ secrets.KaggleUsername }}
-      KAGGLE_KEY: ${{ secrets.KaggleKey }}
-
+      KAGGLE_PAT: ${{ secrets.KaggleUsername }}/${{ secrets.KaggleKey }}
 
     steps:
       - uses: actions/checkout@v2

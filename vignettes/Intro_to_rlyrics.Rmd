@@ -19,7 +19,7 @@ This document introduces you to the **rlyrics** package and all the functions in
 
 ### Set up
 
-*To get access to the Kaggle API, sign up for a Kaggle account at Kaggle. Then go to the 'Account' tab of your user profile ([<https://www.kaggle.com/>](https://www.kaggle.com/){.uri}<username>/account) and select 'Create API Token'. This will trigger the download of kaggle.json, a file containing your API credentials. Place this file in the location \~/.kaggle/kaggle.json. The function will automatically read your Kaggle credentials from the above path.*
+*To get access to the Kaggle API, sign up for a Kaggle account at Kaggle. Then go to the 'Account' tab of your user profile (https://www.kaggle.com/<username\>/account) and select 'Create API Token'. This will trigger the download of kaggle.json, a file containing your API credentials. Place this file in the location **\~/.kaggle/kaggle.json**. The function will automatically read your Kaggle credentials from the above path.*
 
 For more information about API call limits and API care recommendations please visit the [Kaggle API](https://github.com/Kaggle/kaggle-api).
 
@@ -49,24 +49,18 @@ library(rlyrics)
 
 The first function in our library is the `rlyrics::download_data()`. This functions downloads the data and extracts the columns into a dataframe. 
 
-```{r download-data, eval = FALSE}
-df <- download_data(dataset, c("song_title", "artist"))
-```
-
-```{r , echo = FALSE}
-df <- read.table("../man/data/test_for_dl.txt",header =TRUE, sep = ";")
-```
-
-```{r , download-data-example}
-head(df[,c("song_title", "artist")])
+```{r download-data }
+dataset <- "geomack/spotifyclassification"
+df <- rlyrics::download_data(dataset, c("song_title", "artist"))
+head(df)
 ```
 
 ### 2. Extracting Lyrics
 
 The second function in our library is the `rlyrics::extract_lyrics()`. This function gets the song_title and artist name, checks validity and availability of the combination, and extracts the lyrics for that song in a raw string format with header, footer etc which needs to be cleaned in order to create a human-readable text.
 
-```{r extract-lyrics, eval = FALSE }
-lyrics <- extract_lyrics( "22", "Taylor Swift")
+```{r extract-lyrics , eval = FALSE}
+lyrics <- rlyrics::extract_lyrics( "22", "Taylor Swift")
 ```
 
 ```{r extract-lyrics-example, eval = FALSE, echo = FALSE, fig.width=7, fig.height=4}
@@ -79,10 +73,10 @@ knitr::include_graphics("../man/figures/lyrics.PNG")
 
 ### 3. Cleaning the text
 
-As we see the raw lyrics need to be cleaned, that's where our third function `rlyrics::clean_text()` comes to play. This function turns the raw lyrics into a human-readable text, by removing all the HTML Tags, #tags, contraction words, special characters.It also coverts everything to lower case
+As we see the raw lyrics need to be cleaned, that's where our third function `rlyrics::clean_text()` comes to play. This function turns the raw lyrics into a human-readable text, by removing all the HTML Tags, hash tags, contraction words, special characters. It also coverts everything to lower case
 
 ```{r clean_text, eval = FALSE, }
-clean_text <- clean_text(lyrics)
+clean_text <- rlyrics::clean_text(lyrics)
 ```
 ```{r clean-text-example, eval = FALSE, echo = FALSE, fig.width=7, fig.height=4}
 clean_text
@@ -96,13 +90,14 @@ knitr::include_graphics("../man/figures/clean_text.PNG")
 
 In the last and final function we are using Word Cloud. WordCloud is an artistic rendering of the most frequent words in a text document. A higher occurrence for a word is translated into a larger text size. At this stage, we have helper functions to facilitate the extraction and cleaning of lyrics.
 
-The `rlyrics::plot_cloud()` function accepts a dataframe with artist and song_title data. It will then extract the lyrics for all songs and saves a WordCloud of the most occurring terms in the file_path provided by the user. The WordCloud parameters to be set are self-explanatory: max_font_size, max_word and background_color.
+The `rlyrics::plot_cloud()` function accepts a dataframe with multiple artists and multiple song_title data. It will then extract the lyrics for all songs and saves a WordCloud of the most occurring terms in the file_path provided by the user. The WordCloud parameters to be set are self-explanatory: `max_font_size`, `max_word` and `background_color`.
 
 ```{r word-cloud, eval = FALSE, fig.show ='hold'}
-song <- data.frame(song_title = "22", artist = "Taylor Swift")
+song <-  data.frame(song_title  = c("22", "Bohemian Rhapsody"), 
+                    artist = c("Taylor Swift", "Queen"))
 
 # plotting and saving WordCloud
-word_cloud <- plot_cloud(song, max_font_size=1.6, max_words=100, background_color="white")
+word_cloud <- rlyrics::plot_cloud(song, max_font_size=1.6, max_words=100, background_color="white")
 ```
 
 ```{r word-cloud-example,eval = FALSE, echo = FALSE, fig.width=7, fig.height=4}

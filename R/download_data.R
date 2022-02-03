@@ -9,6 +9,7 @@
 #' @examples
 #' dataset <- "geomack/spotifyclassification"
 #' df <- download_data(dataset, c("song_title", "artist"))
+#' df
 download_data <- function(dataset, columns) {
 
 

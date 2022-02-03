@@ -92,11 +92,11 @@ dataset</a> as an example. Once you have installed the package read
 <h4 id="set-up">Set up<a class="anchor" aria-label="anchor" href="#set-up"></a>
 </h4>
 <p><em>To get access to the Kaggle API, sign up for a Kaggle account at
-Kaggle. Then go to the ‘Account’ tab of your user profile (<a href="https://www.kaggle.com/" class="external-link uri">&lt;https://www.kaggle.com/&gt;</a><username>/account) and
+Kaggle. Then go to the ‘Account’ tab of your user profile (<a href="https://www.kaggle.com/" class="external-link uri">https://www.kaggle.com/</a>&lt;username&gt;/account) and
 select ‘Create API Token’. This will trigger the download of
 kaggle.json, a file containing your API credentials. Place this file in
-the location ~/.kaggle/kaggle.json. The function will automatically read
-your Kaggle credentials from the above path.</username></em></p>
+the location <strong>~/.kaggle/kaggle.json</strong>. The function will
+automatically read your Kaggle credentials from the above path.</em></p>
 <p>For more information about API call limits and API care
 recommendations please visit the <a href="https://github.com/Kaggle/kaggle-api" class="external-link">Kaggle API</a>.</p>
 </div>
@@ -136,16 +136,28 @@ cloud of most occurring words in a song/songs by an artist.</p></li>
 <code><a href="../reference/download_data.html">rlyrics::download_data()</a></code>. This functions downloads the data
 and extracts the columns into a dataframe.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/download_data.html">download_data</a></span><span class="op">(</span><span class="va">dataset</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"song_title"</span>, <span class="st">"artist"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"song_title"</span>, <span class="st">"artist"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span>
-<span class="co">#&gt;       song_title           artist</span>
-<span class="co">#&gt; 1       Mask Off           Future</span>
-<span class="co">#&gt; 2        Redbone Childish Gambino</span>
-<span class="co">#&gt; 3   Xanny Family           Future</span>
-<span class="co">#&gt; 4 Master Of None      Beach House</span>
-<span class="co">#&gt; 5 Parallel Lines      Junior Boys</span>
-<span class="co">#&gt; 6     Sneakinâ\200\231            Drake</span></code></pre></div>
+<code class="sourceCode R"><span class="va">dataset</span> <span class="op">&lt;-</span> <span class="st">"geomack/spotifyclassification"</span>
+<span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">rlyrics</span><span class="fu">::</span><span class="fu"><a href="../reference/download_data.html">download_data</a></span><span class="op">(</span><span class="va">dataset</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"song_title"</span>, <span class="st">"artist"</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; New names:</span>
+<span class="co">#&gt; * `` -&gt; ...1</span>
+<span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">1969</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">17</span></span>
+<span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
+<span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> ","</span>
+<span class="co">#&gt; <span style="color: #BB0000;">chr</span>  (2): song_title, artist</span>
+<span class="co">#&gt; <span style="color: #00BB00;">dbl</span> (15): ...1, acousticness, danceability, duration_ms, energy, instrumenta...</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use <span style="color: #262626; background-color: #DADADA;">`spec()`</span> to retrieve the full column specification for this data.</span>
+<span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set <span style="color: #262626; background-color: #DADADA;">`show_col_types = FALSE`</span> to quiet this message.</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span>
+<span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 2</span></span>
+<span class="co">#&gt;   song_title     artist          </span>
+<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Mask Off       Future          </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">2</span> Redbone        Childish Gambino</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">3</span> Xanny Family   Future          </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Master Of None Beach House     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">5</span> Parallel Lines Junior Boys     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">6</span> Sneakin’       Drake</span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="extracting-lyrics">2. Extracting Lyrics<a class="anchor" aria-label="anchor" href="#extracting-lyrics"></a>
@@ -156,8 +168,8 @@ song_title and artist name, checks validity and availability of the
 combination, and extracts the lyrics for that song in a raw string
 format with header, footer etc which needs to be cleaned in order to
 create a human-readable text.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">lyrics</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extract_lyrics.html">extract_lyrics</a></span><span class="op">(</span> <span class="st">"22"</span>, <span class="st">"Taylor Swift"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">lyrics</span> <span class="op">&lt;-</span> <span class="fu">rlyrics</span><span class="fu">::</span><span class="fu"><a href="../reference/extract_lyrics.html">extract_lyrics</a></span><span class="op">(</span> <span class="st">"22"</span>, <span class="st">"Taylor Swift"</span><span class="op">)</span></code></pre></div>
 <p><img src="../reference/figures/lyrics.PNG" width="60%"></p>
 </div>
 <div class="section level4">
@@ -166,10 +178,10 @@ create a human-readable text.</p>
 <p>As we see the raw lyrics need to be cleaned, that’s where our third
 function <code><a href="../reference/clean_text.html">rlyrics::clean_text()</a></code> comes to play. This function
 turns the raw lyrics into a human-readable text, by removing all the
-HTML Tags, #tags, contraction words, special characters.It also coverts
-everything to lower case</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">clean_text</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/clean_text.html">clean_text</a></span><span class="op">(</span><span class="va">lyrics</span><span class="op">)</span></code></pre></div>
+HTML Tags, hash tags, contraction words, special characters. It also
+coverts everything to lower case</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">clean_text</span> <span class="op">&lt;-</span> <span class="fu">rlyrics</span><span class="fu">::</span><span class="fu"><a href="../reference/clean_text.html">clean_text</a></span><span class="op">(</span><span class="va">lyrics</span><span class="op">)</span></code></pre></div>
 <p><img src="../reference/figures/clean_text.PNG" width="60%"></p>
 </div>
 <div class="section level4">
@@ -181,15 +193,17 @@ higher occurrence for a word is translated into a larger text size. At
 this stage, we have helper functions to facilitate the extraction and
 cleaning of lyrics.</p>
 <p>The <code><a href="../reference/plot_cloud.html">rlyrics::plot_cloud()</a></code> function accepts a dataframe
-with artist and song_title data. It will then extract the lyrics for all
-songs and saves a WordCloud of the most occurring terms in the file_path
-provided by the user. The WordCloud parameters to be set are
-self-explanatory: max_font_size, max_word and background_color.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">song</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>song_title <span class="op">=</span> <span class="st">"22"</span>, artist <span class="op">=</span> <span class="st">"Taylor Swift"</span><span class="op">)</span>
+with multiple artists and multiple song_title data. It will then extract
+the lyrics for all songs and saves a WordCloud of the most occurring
+terms in the file_path provided by the user. The WordCloud parameters to
+be set are self-explanatory: <code>max_font_size</code>,
+<code>max_word</code> and <code>background_color</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">song</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>song_title  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"22"</span>, <span class="st">"Bohemian Rhapsody"</span><span class="op">)</span>, 
+                    artist <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Taylor Swift"</span>, <span class="st">"Queen"</span><span class="op">)</span><span class="op">)</span>
 
 <span class="co"># plotting and saving WordCloud</span>
-<span class="va">word_cloud</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_cloud.html">plot_cloud</a></span><span class="op">(</span><span class="va">song</span>, max_font_size<span class="op">=</span><span class="fl">1.6</span>, max_words<span class="op">=</span><span class="fl">100</span>, background_color<span class="op">=</span><span class="st">"white"</span><span class="op">)</span></code></pre></div>
+<span class="va">word_cloud</span> <span class="op">&lt;-</span> <span class="fu">rlyrics</span><span class="fu">::</span><span class="fu"><a href="../reference/plot_cloud.html">plot_cloud</a></span><span class="op">(</span><span class="va">song</span>, max_font_size<span class="op">=</span><span class="fl">1.6</span>, max_words<span class="op">=</span><span class="fl">100</span>, background_color<span class="op">=</span><span class="st">"white"</span><span class="op">)</span></code></pre></div>
 <p><img src="../reference/figures/wordcloud.png" width="60%"></p>
 </div>
 </div>

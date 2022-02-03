@@ -10,10 +10,10 @@ clean_text(text)
 \item{text}{A text to clean.}
 }
 \value{
-A 'text' output without special characters, html_tags, #tags, contaction words, stop-words and convert everything to lower case
+'text' output without special characters, html_tags, #tags, contaction words, stop-words and convert everything to lower case
 }
 \description{
-Cleans the text by removing special characters, html_tags, #tags, contaction words, stop-words and convert everything to lower case.
+Cleans the raw text into human readable text.
 }
 \examples{
 text <- "Early optimization is the root of all evil!"

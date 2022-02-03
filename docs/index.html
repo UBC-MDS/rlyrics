@@ -70,16 +70,20 @@
 <div class="section level1">
 <div class="page-header"><h1 id="rlyrics">rlyrics<a class="anchor" aria-label="anchor" href="#rlyrics"></a>
 </h1></div>
-<ul>
-<li>Authors: Abhiket Gaurav, Artan Zandian, Macy Chan, Manju Abhinandana Kumar</li>
-</ul>
-<p>A R package to extract and analyze lyrics - Authors: Abhiket Gaurav, Artan Zandian, Macy Chan, Manju Abhinandana Kumar</p>
 <!-- badges: start -->
+
 <!-- badges: end -->
+<ul>
+<li>Authors: Abhiket Gaurav, Artan Zandian, Macy Chan, Manju Abhinandana
+Kumar</li>
+</ul>
+<p>An R package to extract and analyze lyrics</p>
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>The goal of rlyrics is to extract and analyze lyrics. It provides functions to download songs attribute datasets from Kaggle, extract lyrics, clean text and generate a word cloud.</p>
+<p>The goal of rlyrics is to extract and analyze lyrics. It provides
+functions to download songs attribute datasets from Kaggle, extract
+lyrics, clean text and generate a word cloud.</p>
 </div>
 <div class="section level2">
 <h2 id="functions">Functions<a class="anchor" aria-label="anchor" href="#functions"></a>
@@ -87,7 +91,7 @@
 <table class="table">
 <colgroup>
 <col width="7%">
-<col width="27%">
+<col width="26%">
 <col width="5%">
 <col width="60%">
 </colgroup>
@@ -104,7 +108,8 @@
 <code>dataset</code>, <code>columns</code>
 </td>
 <td>Dataframe</td>
-<td>Downloads dataset from <code>kaggle dataset</code> and extract <code>columns</code> from csv file</td>
+<td>Downloads dataset from <code>kaggle dataset</code> and extract
+<code>columns</code> from csv file</td>
 </tr>
 <tr class="even">
 <td>extract_lyrics</td>
@@ -112,7 +117,8 @@
 <code>song_title</code>, <code>artist</code>
 </td>
 <td>String</td>
-<td>Extracts song lyrics of a song <code>song_title</code> by <code>artist</code>
+<td>Extracts song lyrics of a song <code>song_title</code> by
+<code>artist</code>
 </td>
 </tr>
 <tr class="odd">
@@ -121,15 +127,19 @@
 <code>text</code>, <code>bool_contra_dict</code>
 </td>
 <td>String</td>
-<td>Cleans up the <code>lyrics</code> by removing special characters, html tags, #tags, contraction words and convert everything to lower case</td>
+<td>Cleans up the <code>lyrics</code> by removing special characters,
+html tags, #tags, contraction words and convert everything to lower
+case</td>
 </tr>
 <tr class="even">
 <td>plot_cloud</td>
 <td>
-<code>song</code>, <code>max_font_size</code>, <code>max_words</code>, <code>background_color</code>
+<code>song</code>, <code>max_font_size</code>,
+<code>max_words</code>, <code>background_color</code>
 </td>
 <td>Image</td>
-<td>Creates a word cloud image of most occurring words of a song/songs by an artist</td>
+<td>Creates a word cloud image of most occurring words of a song/songs
+by an artist</td>
 </tr>
 </tbody>
 </table>
@@ -137,7 +147,11 @@
 <div class="section level2">
 <h2 id="our-package-in-the-r-ecosystem">Our Package in the R Ecosystem<a class="anchor" aria-label="anchor" href="#our-package-in-the-r-ecosystem"></a>
 </h2>
-<p>There exist similar packages in R. However, this package is more holistic, in the sense that it downloads the lyrics through APIs, cleans the text, and then makes the word cloud. There are packages which does one of these steps. This package takes care of all the steps. Of the many other similar packages, the one that come close is: <a href="https://cran.r-project.org/web/packages/geniusr/geniusr.pdf" class="external-link">geniusr</a></p>
+<p>There exist similar packages in R. However, this package is more
+holistic, in the sense that it downloads the lyrics through APIs, cleans
+the text, and then makes the word cloud. There are packages which does
+one of these steps. This package takes care of all the steps. Of the
+many other similar packages, the one that come close is: <a href="https://cran.r-project.org/web/packages/geniusr/geniusr.pdf" class="external-link">geniusr</a></p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -152,10 +166,18 @@
 </h2>
 <p>The rlyrics packages contains the following four functions:</p>
 <ol style="list-style-type: decimal">
-<li><p><code><a href="reference/download_data.html">download_data()</a></code> The download data function downloads dataset from Kaggle, extracts the given columns from csv file and creates a dataframe.</p></li>
-<li><p><code><a href="reference/extract_lyrics.html">extract_lyrics()</a></code> The extract lyrics function, extracts the lyrics from API for a song title and artist and saves it as a dataframe with columns song title, artist and lyrics.</p></li>
-<li><p><code><a href="reference/clean_text.html">clean_text()</a></code> The lyrics extracted from <code><a href="reference/extract_lyrics.html">extract_lyrics()</a></code> are not clean. It removes special characters, html tags, #tags, contraction words and converts everything to lower case.</p></li>
-<li><p><code><a href="reference/plot_cloud.html">plot_cloud()</a></code> The plot cloud function creates a word cloud of most occurring words in a song/songs by an artist.</p></li>
+<li><p><code><a href="reference/download_data.html">download_data()</a></code> The download data function downloads
+dataset from Kaggle, extracts the given columns from csv file and
+creates a dataframe.</p></li>
+<li><p><code><a href="reference/extract_lyrics.html">extract_lyrics()</a></code> The extract lyrics function,
+extracts the lyrics from API for a song title and artist and saves it as
+a dataframe with columns song title, artist and lyrics.</p></li>
+<li><p><code><a href="reference/clean_text.html">clean_text()</a></code> The lyrics extracted from
+<code><a href="reference/extract_lyrics.html">extract_lyrics()</a></code> are not clean. It removes special
+characters, html tags, #tags, contraction words and converts everything
+to lower case.</p></li>
+<li><p><code><a href="reference/plot_cloud.html">plot_cloud()</a></code> The plot cloud function creates a word
+cloud of most occurring words in a song/songs by an artist.</p></li>
 </ol>
 </div>
 <div class="section level2">
@@ -164,10 +186,18 @@
 <div class="section level4">
 <h4 id="downloading-and-selecting">Downloading and Selecting<a class="anchor" aria-label="anchor" href="#downloading-and-selecting"></a>
 </h4>
-<p>The first function in our package is the <code><a href="reference/download_data.html">download_data()</a></code>. Here you will input your <code>kaggle dataset</code> and the columns to be extracted into a dataframe with <code>columns</code> argument.</p>
-<p>To use the Kaggle API, sign up for a Kaggle account at Kaggle. Then go to the ‘Account’ tab of your user profile (<a href="https://www.kaggle.com/" class="external-link uri">https://www.kaggle.com/</a>&lt;username&gt;/account) and select ‘Create API Token’. This will trigger the download of kaggle.json, a file containing your API credentials. Place this file in the location ~/.kaggle/kaggle.json. The function will automatically read your Kaggle credentials from the above path.</p>
+<p>The first function in our package is the
+<code><a href="reference/download_data.html">download_data()</a></code>. Here you will input your
+<code>kaggle dataset</code> and the columns to be extracted into a
+dataframe with <code>columns</code> argument.</p>
+<p>To use the Kaggle API, sign up for a Kaggle account at Kaggle. Then
+go to the ‘Account’ tab of your user profile (<a href="https://www.kaggle.com/" class="external-link uri">https://www.kaggle.com/</a>&lt;username&gt;/account) and
+select ‘Create API Token’. This will trigger the download of
+kaggle.json, a file containing your API credentials. Place this file in
+the location ~/.kaggle/kaggle.json. The function will automatically read
+your Kaggle credentials from the above path.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"rlyrics"</span><span class="op">)</span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">rlyrics</span><span class="op">)</span>
 <span class="co"># Example dataset: Spotify Song Attributes  </span>
 <span class="va">dataset</span> <span class="op">&lt;-</span> <span class="st">"geomack/spotifyclassification"</span>
 <span class="co"># Extract columns </span>
@@ -176,18 +206,23 @@
 <div class="section level4">
 <h4 id="extracting-lyrics">Extracting Lyrics<a class="anchor" aria-label="anchor" href="#extracting-lyrics"></a>
 </h4>
-<p>The <code><a href="reference/extract_lyrics.html">extract_lyrics()</a></code> function gets the <code>song_title</code> and <code>artist</code> name, checks validity and availability of the combination, and extracts the lyrics for that song in a raw string format with header, footer etc which needs to be cleaned in order to create a human-readable text.</p>
+<p>The <code><a href="reference/extract_lyrics.html">extract_lyrics()</a></code> function gets the
+<code>song_title</code> and <code>artist</code> name, checks validity
+and availability of the combination, and extracts the lyrics for that
+song in a raw string format with header, footer etc which needs to be
+cleaned in order to create a human-readable text.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"rlyrics"</span><span class="op">)</span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">rlyrics</span><span class="op">)</span>
 <span class="co"># extracting lyrics </span>
 <span class="fu"><a href="reference/extract_lyrics.html">extract_lyrics</a></span><span class="op">(</span> <span class="st">"22"</span>, <span class="st">"Taylor Swift"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="cleaning">Cleaning<a class="anchor" aria-label="anchor" href="#cleaning"></a>
 </h4>
-<p>The <code><a href="reference/clean_text.html">clean_text()</a></code> function turns the raw lyrics into a human-readable text.</p>
+<p>The <code><a href="reference/clean_text.html">clean_text()</a></code> function turns the raw lyrics into a
+human-readable text.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"rlyrics"</span><span class="op">)</span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">rlyrics</span><span class="op">)</span>
 <span class="va">text</span> <span class="op">&lt;-</span> <span class="st">"Early optimization is the root of all evil!"</span>
 <span class="co"># Clean the extracted raw lyrics (text)</span>
 <span class="fu"><a href="reference/clean_text.html">clean_text</a></span><span class="op">(</span><span class="va">text</span><span class="op">)</span></code></pre></div>
@@ -195,9 +230,17 @@
 <div class="section level4">
 <h4 id="creating-wordcloud">Creating WordCloud<a class="anchor" aria-label="anchor" href="#creating-wordcloud"></a>
 </h4>
-<p>WordCloud is an artistic rendering of the most frequent words in a text document. A higher occurrence for a word is translated into a larger text size. At this stage, we have helper functions to facilitate the extraction and cleaning of lyrics. The <code><a href="reference/plot_cloud.html">plot_cloud()</a></code> function accepts a dataframe with artist and song_title data. It will then extract the lyrics for all songs and saves a WordCloud of the most occurring terms in the file_path provided by the user. The WordCloud parameters to be set are self-explanatory: max_font_size, max_word and background_color.</p>
+<p>WordCloud is an artistic rendering of the most frequent words in a
+text document. A higher occurrence for a word is translated into a
+larger text size. At this stage, we have helper functions to facilitate
+the extraction and cleaning of lyrics. The <code><a href="reference/plot_cloud.html">plot_cloud()</a></code>
+function accepts a dataframe with artist and song_title data. It will
+then extract the lyrics for all songs and saves a WordCloud of the most
+occurring terms in the file_path provided by the user. The WordCloud
+parameters to be set are self-explanatory: max_font_size, max_word and
+background_color.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"rlyrics"</span><span class="op">)</span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">rlyrics</span><span class="op">)</span>
 <span class="va">song</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>song_title  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"22"</span>, <span class="st">"Bohemian Rhapsody"</span><span class="op">)</span>, artist <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Taylor Swift"</span>, <span class="st">"Queen"</span><span class="op">)</span><span class="op">)</span>
 <span class="co"># plotting and saving WordCloud</span>
 <span class="fu"><a href="reference/plot_cloud.html">plot_cloud</a></span><span class="op">(</span><span class="va">song</span>, max_font_size<span class="op">=</span><span class="fl">1.6</span>, max_words<span class="op">=</span><span class="fl">100</span>, background_color<span class="op">=</span><span class="st">"white"</span><span class="op">)</span></code></pre></div>
@@ -231,12 +274,16 @@
 </tr>
 </tbody>
 </table>
-<p>We welcome and recognize all contributions. Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.</p>
+<p>We welcome and recognize all contributions. Check out the
+contributing guidelines. Please note that this project is released with
+a Code of Conduct. By contributing to this project, you agree to abide
+by its terms.</p>
 </div>
 <div class="section level2">
 <h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
 </h2>
-<p><code>rlyrics</code> was created by Group 2. It is licensed under the terms of the MIT license.</p>
+<p><code>rlyrics</code> was created by Group 2. It is licensed under the
+terms of the MIT license.</p>
 </div>
 </div>
   </div>
@@ -272,7 +319,13 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/UBC-MDS/rlyrics/actions" class="external-link"><img src="https://github.com/UBC-MDS/rlyrics/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://codecov.io/gh/UBC-MDS/rlyrics" class="external-link"><img src="https://codecov.io/gh/UBC-MDS/rlyrics/branch/main/graph/badge.svg?token=5JHKJfpMQ5" alt="codecov"></a></li>
+</ul>
+</div>
 
   </div>
 </div>
@@ -280,12 +333,14 @@
 
       <footer><div class="copyright">
   <p></p>
-<p>Developed by Abhiket - Artan - Macy - Manju Gaurav - Zandian - Chan - Abhinandana Kumar.</p>
+<p>Developed by Abhiket - Artan - Macy - Manju Gaurav - Zandian - Chan -
+Abhinandana Kumar.</p>
 </div>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
+2.0.2.</p>
 </div>
 
       </footer>

@@ -29,7 +29,7 @@ For more information about API call limits and API care recommendations please v
 The goal of **rlyrics** is to extract and analyze lyrics. It provides functions to download songs attribute, extract lyrics, clean text and generate a word cloud. It makes all the steps seamless and fast.Using this package a user can analyse any (English) lyrics from any artist
 
 
-### The package is an assimilation of four independent functions:
+The package is an assimilation of four independent functions:
 
 1.  `download_data()`: The download data function downloads dataset from Kaggle, extracts the given columns from csv file and creates a dataframe.
 

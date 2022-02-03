@@ -18,6 +18,7 @@ Return song lyrics
 Extracting lyrics for a song
 }
 \examples{
-# extract_lyrics( "22", "Taylor Swift")
+\dontrun{
+extract_lyrics( "22", "Taylor Swift")
 }
 }

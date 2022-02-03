@@ -21,8 +21,14 @@ clean_text <- function(text) {
         stop("Blank text input")
     }
 
+    # Remove everything inside []
+    temp <- gsub("\\[[^][]*]"," ",text)
+    # Add Space before capital letter
+    temp <- gsub("([a-z])([A-Z])", "\\1 \\2", temp)
+    # Remove the word Lyrics
+    temp <- gsub(" Lyrics ", " ", temp)
     # Lowercase
-    temp <- tolower(text)
+    temp <- tolower(temp)
     # replacing contraction words
     temp <- textclean::replace_contraction(temp)
     # removing punctuation marks
@@ -33,5 +39,6 @@ clean_text <- function(text) {
     temp <- stringr::str_replace_all(temp,"[^a-zA-Z\\s]", " ")
     # removing extra spaces
     temp <- stringr::str_replace_all(temp,"[\\s]+", " ")
+
     return(temp)
 }

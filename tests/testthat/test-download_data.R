@@ -24,12 +24,6 @@ test_that("Incorrect column names, please check again", {
                  "Incorrect column names, please check again")
 })
 
-# test_that("hpapy case", {
-#     target <- readr::read_csv(here::here("tests", "testthat", "data","data.csv"))
-#     output <- download_data(dataset, c("song_title", "artist"))
-#     expect_equal(target[,c('song_title', 'artist')], output)
-# })
-
 test_that("happy case", {
     output <- download_data(dataset, c("song_title", "artist"))
     expect_true("song_title" %in% colnames(output))

@@ -1,11 +1,11 @@
 Package: rlyrics
 Title: Downloads, cleans and creates wordcloud of lyrics
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "Abhiket - Artan - Macy - Manju",
-           family = "Gaurav - Zandian - Chan - Abhinandana Kumar",
-           role = c("aut", "cre"),
-           email = "artankhan@gmail.com")
+Authors@R: c(
+    person("Abhiket","Gaurav", , "abhiketg@student.ubc.ca", role = c("aut")),
+    person("Artan","Zandian", , "aazandian@student.ubc.ca", role = c("aut")),
+    person("Macy","Chan", , "macychan@student.ubc.ca", role = c("aut", "cre")),
+    person("Manju","Abhinandana Kumar", , "manju2na@student.ubc.ca", role = c("aut")))
 Description: Downloads data from Kaggle, finds the lyrics of a certain artist and song, cleans the lyrics and creates wordcloud of lyrics.
 License: MIT + file LICENSE
 Encoding: UTF-8

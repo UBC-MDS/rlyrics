@@ -40,6 +40,7 @@ test_that("song title and artist do not match", {
 
 # Testing if an image is created
 test_that("image is created", {
+    skip_on_ci()
     expect_equal(length(plot_cloud(song = song)), 8)
 })
 

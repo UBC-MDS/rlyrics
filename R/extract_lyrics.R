@@ -20,7 +20,6 @@ extract_lyrics <- function(song_title, artist) {
         stop("Invalid column type, song title and artist have to be strings")
     }
 
-    lyrics = ""
     url = paste0(
         "https://genius.com/",
         stringr::str_replace_all(artist, " ", "-"),
@@ -33,15 +32,14 @@ extract_lyrics <- function(song_title, artist) {
     Scraped_webpage <- rvest::read_html(url)
     lyrics_html <- rvest::html_nodes(Scraped_webpage, xpath = '//*[@id="lyrics-root"]')
     stripped_htmltext <- rvest::html_text(lyrics_html)
-    closeAllConnections()
     },
     error=function(cond) {
         stop("Song not found")
     })
 
-    lyrics <- gsub("\\[[^][]*]"," ",stripped_htmltext)
-    lyrics <- gsub("([a-z])([A-Z])", "\\1 \\2", lyrics)
-    lyrics <- gsub(" Lyrics ", " ", lyrics)
-    lyrics
+    #lyrics <- gsub("\\[[^][]*]"," ",stripped_htmltext)
+    #lyrics <- gsub("([a-z])([A-Z])", "\\1 \\2", lyrics)
+    #lyrics <- gsub(" Lyrics ", " ", lyrics)
+    stripped_htmltext
 }
 

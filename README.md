@@ -85,7 +85,7 @@ your API credentials. Place this file in the location
 credentials from the above path.
 
 ``` r
-library("rlyrics")
+library(rlyrics)
 # Example dataset: Spotify Song Attributes  
 dataset <- "geomack/spotifyclassification"
 # Extract columns 
@@ -100,7 +100,7 @@ lyrics for that song in a raw string format with header, footer etc
 which needs to be cleaned in order to create a human-readable text.
 
 ``` r
-library("rlyrics")
+library(rlyrics)
 # extracting lyrics 
 extract_lyrics( "22", "Taylor Swift")
 ```
@@ -111,7 +111,7 @@ The `clean_text()` function turns the raw lyrics into a human-readable
 text.
 
 ``` r
-library("rlyrics")
+library(rlyrics)
 text <- "Early optimization is the root of all evil!"
 # Clean the extracted raw lyrics (text)
 clean_text(text)
@@ -129,7 +129,7 @@ in the file_path provided by the user. The WordCloud parameters to be
 set are self-explanatory: max_font_size, max_word and background_color.
 
 ``` r
-library("rlyrics")
+library(rlyrics)
 song <- data.frame(song_title  = c("22", "Bohemian Rhapsody"), artist = c("Taylor Swift", "Queen"))
 # plotting and saving WordCloud
 plot_cloud(song, max_font_size=1.6, max_words=100, background_color="white")

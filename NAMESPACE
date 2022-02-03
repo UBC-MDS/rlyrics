@@ -2,5 +2,4 @@
 
 export(clean_text)
 export(download_data)
-export(extract_lyrics)
 export(plot_cloud)

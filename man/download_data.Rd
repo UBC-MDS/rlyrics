@@ -21,3 +21,7 @@ Downloads dataset from kaggle and creates a dataframe with input columns
 dataset <- "geomack/spotifyclassification"
 df <- download_data(dataset, c("song_title", "artist"))
 }
+\examples{
+dataset <- "geomack/spotifyclassification"
+df <- download_data(dataset, c("song_title", "artist"))
+}

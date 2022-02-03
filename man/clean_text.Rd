@@ -2,7 +2,7 @@
 % Please edit documentation in R/clean_text.R
 \name{clean_text}
 \alias{clean_text}
-\title{Cleans the text by removing special characters, html_tags, #tags, contaction words.}
+\title{Cleans the text by removing special characters, html_tags, #tags, contaction words, stop-words and convert everything to lower case.}
 \usage{
 clean_text(text)
 }
@@ -10,8 +10,12 @@ clean_text(text)
 \item{text}{A text to clean.}
 }
 \value{
-Cleaned text
+text Cleaned text
 }
 \description{
-Cleans the text by removing special characters, html_tags, #tags, contaction words.
+Cleans the text by removing special characters, html_tags, #tags, contaction words, stop-words and convert everything to lower case.
+}
+\examples{
+text <- "Early optimization is the root of all evil!"
+clean_text(text)
 }

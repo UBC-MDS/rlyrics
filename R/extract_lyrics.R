@@ -37,9 +37,6 @@ extract_lyrics <- function(song_title, artist) {
         stop("Song not found")
     })
 
-    #lyrics <- gsub("\\[[^][]*]"," ",stripped_htmltext)
-    #lyrics <- gsub("([a-z])([A-Z])", "\\1 \\2", lyrics)
-    #lyrics <- gsub(" Lyrics ", " ", lyrics)
     stripped_htmltext
 }
 

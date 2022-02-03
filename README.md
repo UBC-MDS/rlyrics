@@ -7,13 +7,13 @@
 
 [![R-CMD-check](https://github.com/UBC-MDS/rlyrics/workflows/R-CMD-check/badge.svg)](https://github.com/UBC-MDS/rlyrics/actions)
 [![codecov](https://codecov.io/gh/UBC-MDS/rlyrics/branch/main/graph/badge.svg?token=5JHKJfpMQ5)](https://codecov.io/gh/UBC-MDS/rlyrics)
+
 <!-- badges: end -->
 
 -   Authors: Abhiket Gaurav, Artan Zandian, Macy Chan, Manju Abhinandana
     Kumar
 
-A R package to extract and analyze lyrics - Authors: Abhiket Gaurav,
-Artan Zandian, Macy Chan, Manju Abhinandana Kumar
+An R package to extract and analyze lyrics
 
 ## Overview
 

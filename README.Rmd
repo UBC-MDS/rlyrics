@@ -89,14 +89,6 @@ library(rlyrics)
 extract_lyrics( "22", "Taylor Swift")
 ```
 
-```{r extract-lyrics-example, eval = FALSE, echo = FALSE, fig.width=7, fig.height=4, eval=FALSE}
-lyrics
-```
-
-```{r, echo=FALSE, out.width="60%"}
-knitr::include_graphics("../man/figures/lyrics.png")
-```
-
 #### Cleaning
 
 The `clean_text()` function turns the raw lyrics into a human-readable text.
@@ -108,14 +100,6 @@ text <- "Early optimization is the root of all evil!"
 clean_text(text)
 ```
 
-```{r clean-text-example, eval = FALSE, echo = FALSE, fig.width=7, fig.height=4}
-clean_text
-```
-
-```{r, echo=FALSE, out.width="60%"}
-knitr::include_graphics("../man/figures/clean_text.png")
-```
-
 #### Creating WordCloud
 
 WordCloud is an artistic rendering of the most frequent words in a text document. A higher occurrence for a word is translated into a larger text size. At this stage, we have helper functions to facilitate the extraction and cleaning of lyrics. The `plot_cloud()` function accepts a dataframe with artist and song_title data. It will then extract the lyrics for all songs and saves a WordCloud of the most occurring terms in the file_path provided by the user. The WordCloud parameters to be set are self-explanatory: max_font_size, max_word and background_color.
@@ -125,14 +109,6 @@ library(rlyrics)
 song <- data.frame(song_title  = c("22", "Bohemian Rhapsody"), artist = c("Taylor Swift", "Queen"))
 # plotting and saving WordCloud
 plot_cloud(song, max_font_size=1.6, max_words=100, background_color="white")
-```
-
-```{r word-cloud-example,eval = FALSE, echo = FALSE, fig.width=7, fig.height=4, eval=FALSE}
-word_cloud
-```
-
-```{r ,echo=FALSE, out.width="60%"}
-knitr::include_graphics("../man/figures/wordcloud.png")
 ```
 
 ## Contributors

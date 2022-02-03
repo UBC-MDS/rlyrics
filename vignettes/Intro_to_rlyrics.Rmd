@@ -74,7 +74,7 @@ lyrics
 ```
 
 ```{r, echo=FALSE, out.width="60%"}
-knitr::include_graphics("../man/figures/lyrics.png")
+knitr::include_graphics("../man/figures/lyrics.PNG")
 ```
 
 ### 3. Cleaning the text
@@ -89,7 +89,7 @@ clean_text
 ```
 
 ```{r, echo=FALSE, out.width="60%"}
-knitr::include_graphics("../man/figures/clean_text.png")
+knitr::include_graphics("../man/figures/clean_text.PNG")
 ```
 
 ### 4. Creating WordCloud

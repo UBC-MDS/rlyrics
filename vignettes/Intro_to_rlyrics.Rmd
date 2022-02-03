@@ -110,6 +110,6 @@ word_cloud
 ```
 
 ```{r ,echo=FALSE, out.width="60%"}
-knitr::include_graphics("../man/figures/wordcloud.PNG")
+knitr::include_graphics("../man/figures/wordcloud.png")
 ```
 

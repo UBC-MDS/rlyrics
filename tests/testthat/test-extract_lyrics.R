@@ -17,6 +17,7 @@ test_that("invalid column type", {
 })
 
 test_that("song not found", {
+    skip_on_ci()
     expect_error(extract_lyrics( "Mary has a little lamb" , "Taylor Swift") , "Song not found")
     expect_error(extract_lyrics( "22" , "charlie puth") , "Song not found")
 })

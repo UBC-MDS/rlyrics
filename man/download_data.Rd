@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_data.R
 \name{download_data}
 \alias{download_data}
-\title{Downloads dataset from kaggle to filepath and creates a dataframe with input columns}
+\title{Downloads dataset from kaggle and creates a dataframe with input columns}
 \usage{
 download_data(dataset, columns)
 }
@@ -15,7 +15,11 @@ download_data(dataset, columns)
 A dataframe with the given column names
 }
 \description{
-Downloads dataset from kaggle to filepath and creates a dataframe with input columns
+Downloads dataset from kaggle and creates a dataframe with input columns
+}
+\examples{
+dataset <- "geomack/spotifyclassification"
+df <- download_data(dataset, c("song_title", "artist"))
 }
 \examples{
 dataset <- "geomack/spotifyclassification"

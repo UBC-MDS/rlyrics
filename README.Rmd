@@ -71,6 +71,8 @@ The first function in our package is the `download_data()`. Here you will input 
 
 To use the Kaggle API, sign up for a Kaggle account at Kaggle. Then go to the 'Account' tab of your user profile (<https://www.kaggle.com/>\<username>/account) and select 'Create API Token'. This will trigger the download of kaggle.json, a file containing your API credentials. Place this file in the location \~/.kaggle/kaggle.json. The function will automatically read your Kaggle credentials from the above path.
 
+For more information about API call limits and API care recommendations please visit the [Kaggle API](https://github.com/Kaggle/kaggle-api) or [Official Kaggle API documentation](https://www.kaggle.com/docs/api).
+
 ```{r, eval = FALSE}
 library(rlyrics)
 # Example dataset: Spotify Song Attributes  
@@ -109,6 +111,10 @@ library(rlyrics)
 song <- data.frame(song_title  = c("22", "Bohemian Rhapsody"), artist = c("Taylor Swift", "Queen"))
 # plotting and saving WordCloud
 plot_cloud(song, max_font_size=1.6, max_words=100, background_color="white")
+```
+
+```{r ,echo=FALSE, out.width="40%"}
+knitr::include_graphics("man/figures/wordcloud.png")
 ```
 
 ## Contributors

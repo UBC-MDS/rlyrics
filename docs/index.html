@@ -196,6 +196,9 @@ select ‘Create API Token’. This will trigger the download of
 kaggle.json, a file containing your API credentials. Place this file in
 the location ~/.kaggle/kaggle.json. The function will automatically read
 your Kaggle credentials from the above path.</p>
+<p>For more information about API call limits and API care
+recommendations please visit the <a href="https://github.com/Kaggle/kaggle-api" class="external-link">Kaggle API</a> or <a href="https://www.kaggle.com/docs/api" class="external-link">Official Kaggle API
+documentation</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">rlyrics</span><span class="op">)</span>
 <span class="co"># Example dataset: Spotify Song Attributes  </span>
@@ -244,6 +247,7 @@ background_color.</p>
 <span class="va">song</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>song_title  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"22"</span>, <span class="st">"Bohemian Rhapsody"</span><span class="op">)</span>, artist <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Taylor Swift"</span>, <span class="st">"Queen"</span><span class="op">)</span><span class="op">)</span>
 <span class="co"># plotting and saving WordCloud</span>
 <span class="fu"><a href="reference/plot_cloud.html">plot_cloud</a></span><span class="op">(</span><span class="va">song</span>, max_font_size<span class="op">=</span><span class="fl">1.6</span>, max_words<span class="op">=</span><span class="fl">100</span>, background_color<span class="op">=</span><span class="st">"white"</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/wordcloud.png" width="40%"></p>
 </div>
 </div>
 <div class="section level2">

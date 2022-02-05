@@ -84,6 +84,10 @@ your API credentials. Place this file in the location
 \~/.kaggle/kaggle.json. The function will automatically read your Kaggle
 credentials from the above path.
 
+For more information about API call limits and API care recommendations
+please visit the [Kaggle API](https://github.com/Kaggle/kaggle-api) or
+[Official Kaggle API documentation](https://www.kaggle.com/docs/api).
+
 ``` r
 library(rlyrics)
 # Example dataset: Spotify Song Attributes  
@@ -134,6 +138,8 @@ song <- data.frame(song_title  = c("22", "Bohemian Rhapsody"), artist = c("Taylo
 # plotting and saving WordCloud
 plot_cloud(song, max_font_size=1.6, max_words=100, background_color="white")
 ```
+
+<img src="man/figures/wordcloud.png" width="40%" />
 
 ## Contributors
 

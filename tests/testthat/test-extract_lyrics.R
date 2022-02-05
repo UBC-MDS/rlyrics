@@ -1,6 +1,6 @@
 test_that("happy case", {
     skip_on_ci()
-    target = readr::read_file(here::here("tests", "testthat", "data","lyrics_22.txt")) |> substr(1, 100)
+    target = "22 Lyrics[Verse 1]It feels like a perfect nightTo dress up like hipstersAnd make fun of our exes, uh"
     output = extract_lyrics("22", "Taylor Swift") |> substr(1, 100)
     expect_equal(target , output)
 })
